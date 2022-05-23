@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.nav{
+    background-color: #3e6787;
+    width: 100px;
+    height: 95vh;
+    border-radius: 30px;
+    position: fixed;
+    left: 20px;
+    top: 20px;
+}
+.frienddiv{
+    background-color: white;
+    width: 320px;
+    height: 95vh;
+    border-radius: 30px;
+    position: fixed;
+    right: 10px;
+    top: 20px;
+    box-shadow: -1px 0 5px rgb(149, 145, 145);
+    word-wrap: break-word;
+    padding: 10px;
+}
+
+.content{
+    width: 67%;
+    min-height: 100px;
+    margin: 20px 145px;
+}
+.first{
+    display: grid;
+    grid-template-areas: 
+    "div0 div0 div0"
+    "div1 div1 div2"
+    "div1 div1 div2"
+    "div1 div1 div2"
+    "div1 div1 div2"
+    "div1 div1 div3"
+    "div1 div1 div3"
+    "div1 div1 div3"
+    "div1 div1 div3"
+    "div1 div1 div3"
+    "div1 div1 div3"
+    "div1 div1 div3"
+    "div1 div1 div3"
+    "div1 div1 div3"
+    ;
+    width: 100%;
+    height: 600px;
+    grid-gap: 20px;
+
+}
+.first .div0{
+    grid-area: div0;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.first .div0 .name span{
+    font-size: 30px;
+    font-weight: 900;
+}
+.first .div0 .search input{
+    width: 270px;
+    height: 45px;
+    padding-left: 15px;
+    border-radius: 50px;
+    background-color: rgb(212, 205, 195);
+    border: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.first .div1{
+    grid-area: div1;
+    background-color: #3e6787;
+    border-radius: 30px;
+}
+.first .div2{
+    grid-area: div2;
+    background-color: #3e6787;
+    border-radius: 30px;
+}
+.first .div3{
+    grid-area: div3;
+    background-color: #b48b8b;
+    border-radius: 30px;
+}
+.first .div3 div{
+    background-color: rgb(233, 177, 177);
+    width: 100%;
+    height: 40%;
+    border-radius: 30px;
+}
+.second {
+    display: grid;
+    grid-template-areas: 
+    "div1 div2 div3"
+    ;
+    width: 100%;
+    height: 250px;
+    margin-top: 70px;
+    grid-gap: 20px;
+}
+.second > div{
+    box-shadow: 1px 0px 5px black;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+}
+.second .div1{
+    grid-area: div1;
+}
+.second .div2{
+    grid-area: div2;
+}
+.second .div3{
+    grid-area: div3;
+}
+.second > div div{
+    width: 35%;
+    height: 35%;
+    background-color: #3e6787;
+    margin-top: -40px;
+    border-radius: 30px;
+}
+body{
+    -webkit-perspective: 100%;
+    perspective: 100%;
+}
+.backface{
+    position: relative;
+    width: 50%;
+    height: 300px;
+    margin: 30px auto;
+    transform-style: preserve-3d;
+    transition: all 1s ease-in-out;
+}
+.backface:hover{
+    transform: rotateY(180deg);
+}
+.backface .front{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #3e6787;
+    backface-visibility: hidden;
+    z-index: 2;
+}
+.backface .back{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #b48b8b;
+}
